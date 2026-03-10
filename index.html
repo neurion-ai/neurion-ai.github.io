@@ -1,208 +1,396 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<!--
-Nanoseconds tick by as AI titans battle for billions in a digital arena.
--->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Neurion</title>
-  <meta name='title' content='Neurion'>
-  <meta name="description" content="Neurion, a quantitative trading firm, leverages AI to unlock profitable opportunities in cryptocurrency markets.">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    html {
-      background:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(ulam-spiral-500.png) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      height: 100%;
-      color: white;
-    }
-
-    body {
-      min-height: 100%;
-      font-family: sans-serif;
-      display: flex; justify-content:
-      center; margin: 0;
-    }
-
-    .bg-fill {
-      background-color: black;
-      opacity: 0;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: -1;
-    }
-
-    .inner {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    .header {
-      padding-top: 10px;
-      font-weight: 400;
-      margin-bottom: 50px;
-    }
-
-    .header h1 {
-      display: none;
-    }
-
-    .header svg {
-      width: 1000px;
-      height: 250px;
-    }
-
-    .intro {
-      text-align: center;
-      max-width: 680px;
-      line-height: 1.7em;
-      font-family: Raleway, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-smoothing: grayscale;
-      font-size: 16px;
-      margin: 0 160px;
-    }
-
-    a {
-      color: white;
-    }
-
-    .big-logo { display: inherit; }
-    .small-logo { display: none; }
-
-    @media only screen and (max-width: 1680px) {
-      .header svg {
-        width: 700px;
-        height: 150px;
-      }
-
-      .intro {
-        max-width: 680px;
-        margin: 0 10px;
-      }
-
-      .header {
-        margin-bottom: 10px;
-      }
-    }
-
-    @media only screen and (max-width: 1024px) {
-      .header svg {
-        width: 400px;
-        height: 100px;
-      }
-
-      .intro {
-        max-width: 390px;
-        margin: 0 5px;
-      }
-
-      .header {
-        margin-bottom: 10px;
-      }
-
-      .big-logo { display: none; }
-      .small-logo { display: inherit; }
-    }
-
-    @media only screen and (max-width: 680px) {
-      .header svg {
-        width: 300px;
-        /*height: 150px;*/
-      }
-
-      .intro {
-        max-width: 290px;
-        margin: 0 5px;
-      }
-
-      .header {
-        margin-bottom: 10px;
-      }
-    }
-
-  </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS0D4EPXTJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-HS0D4EPXTJ');
-
-    const contact = 'bWFp' + 'bHRvOmNvbnRhY3RA' + 'bmV1cmlvbi5haQ==';
-    window.onload = () => {
-      const link = document.getElementById('email')
-      link.href = atob(contact);
-
-      console.log([
-        'Nanoseconds tick by as AI titans battle for billions in a digital arena.'
-      ].join('\n'));
-    }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurion — Quantitative AI Hedge Fund</title>
+<meta name="description" content="Neurion is a next-generation quantitative hedge fund harnessing artificial intelligence and advanced machine learning for global markets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HS0D4EPXTJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HS0D4EPXTJ');</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#060d18}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#fff;display:flex;align-items:center;justify-content:center}
+canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
+.container{position:relative;z-index:1;text-align:center;padding:2rem;opacity:0;transition:opacity 2s ease}
+.container.visible{opacity:1}
+.big-logo{display:block;margin:0 auto 2.5rem;filter:drop-shadow(0 0 40px rgba(0,0,0,0.6));max-width:90vw;height:auto}
+.small-logo{display:none;margin:0 auto 2rem;filter:drop-shadow(0 0 30px rgba(0,0,0,0.6));max-width:85vw;height:auto}
+.description{font-weight:300;font-size:15px;line-height:1.85;max-width:540px;margin:0 auto 2.5rem;color:rgba(255,255,255,0.55);text-shadow:0 0 40px rgba(0,0,0,0.8)}
+.contact{display:inline-block;font-weight:300;font-size:13px;letter-spacing:0.12em;color:rgba(255,255,255,0.35);text-decoration:none;text-shadow:0 0 40px rgba(0,0,0,0.8);transition:color 0.5s ease;text-transform:lowercase}
+.contact:hover{color:rgba(255,255,255,0.65)}
+@media(max-width:640px){
+  .big-logo{display:none}
+  .small-logo{display:block}
+  .description{font-size:14px;line-height:1.75;max-width:90vw;margin-bottom:2rem}
+}
+</style>
 </head>
 <body>
-  <div class='bg-fill'></div>
-  <div class='inner'>
-    <div class='header'>
-      <h1>Neurion</h1>
+<canvas id="flow"></canvas>
+<div class="container" id="content">
+  <svg class="big-logo" width="876" height="176" viewBox="0 0 876 176" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_2101_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="9" width="158" height="158"><g clip-path="url(#clip0_2101_18)"><path d="M79 9L147.416 48.5V127.5L79 167L10.584 127.5V48.5L79 9Z" fill="#BD3455"/></g></mask><g mask="url(#mask0_2101_18)"><path fill-rule="evenodd" clip-rule="evenodd" d="M25 -1H13V116.22L25 103.514V-1ZM25 112.253L13 124.959V199H25V112.253ZM37 99.5464L49 86.8403V199H37V99.5464ZM49 78.1018L37 90.8079V-1H49V78.1018ZM61 92.2403V199H73V104.238L61 92.2403ZM73 95.7534L61 83.7559V-1H73V95.7534ZM85 111.441V199H97V101.651L85 111.441ZM97 93.908L85 103.697V-1H97V93.908ZM109 91.8619V199H121V82.0725L109 91.8619ZM121 74.3292L109 84.1186V-1H121V74.3292ZM133 72.2831V199H145V62.4937L133 72.2831ZM145 54.7505L133 64.5399V-1H145V54.7505Z" fill="white"/></g><path d="M166.09 142V41.2H181.63L255.55 129.12V41.2H266.89V142H251.35L177.43 54.08V142H166.09ZM282.854 142V41.2H374.834V52.54H294.194V85.86H359.014V97.34H294.194V130.66H374.834V142H282.854ZM406.282 142C403.202 142 400.355 141.253 397.742 139.76C395.222 138.267 393.215 136.26 391.722 133.74C390.229 131.127 389.482 128.28 389.482 125.2V41.2H400.822V125.2C400.822 126.693 401.335 128 402.362 129.12C403.482 130.147 404.789 130.66 406.282 130.66H473.482C474.975 130.66 476.235 130.147 477.262 129.12C478.382 128 478.942 126.693 478.942 125.2V41.2H490.282V125.2C490.282 128.28 489.535 131.127 488.042 133.74C486.549 136.26 484.495 138.267 481.882 139.76C479.362 141.253 476.562 142 473.482 142H406.282ZM590.819 142L557.919 102.8H572.759L605.799 141.86V142H590.819ZM505.699 142V41.34H589.699C592.779 41.34 595.579 42.1333 598.099 43.72C600.713 45.2133 602.766 47.22 604.259 49.74C605.753 52.26 606.499 55.06 606.499 58.14V87.68C606.499 90.76 605.753 93.56 604.259 96.08C602.766 98.6 600.713 100.653 598.099 102.24C595.579 103.733 592.779 104.48 589.699 104.48H517.039V142H505.699ZM522.499 93H589.699C591.193 93 592.453 92.4867 593.479 91.46C594.599 90.4333 595.159 89.1733 595.159 87.68V58.14C595.159 56.6467 594.599 55.3867 593.479 54.36C592.453 53.24 591.193 52.68 589.699 52.68H522.499C521.006 52.68 519.699 53.24 518.579 54.36C517.553 55.3867 517.039 56.6467 517.039 58.14V87.68C517.039 89.1733 517.553 90.4333 518.579 91.46C519.699 92.4867 521.006 93 522.499 93ZM622.627 142V41.2H634.107V142H622.627ZM667.688 142C664.608 142 661.761 141.253 659.148 139.76C656.628 138.267 654.621 136.26 653.128 133.74C651.635 131.127 650.888 128.28 650.888 125.2V58C650.888 54.92 651.635 52.12 653.128 49.6C654.621 46.9867 656.628 44.9333 659.148 43.44C661.761 41.9467 664.608 41.2 667.688 41.2H734.888C737.968 41.2 740.768 41.9467 743.288 43.44C745.901 44.9333 747.955 46.9867 749.448 49.6C750.941 52.12 751.688 54.92 751.688 58V125.2C751.688 128.28 750.941 131.127 749.448 133.74C747.955 136.26 745.901 138.267 743.288 139.76C740.768 141.253 737.968 142 734.888 142H667.688ZM667.688 130.66H734.888C736.381 130.66 737.641 130.147 738.668 129.12C739.788 128 740.348 126.693 740.348 125.2V58C740.348 56.5067 739.788 55.2467 738.668 54.22C737.641 53.1 736.381 52.54 734.888 52.54H667.688C666.195 52.54 664.888 53.1 663.768 54.22C662.741 55.2467 662.228 56.5067 662.228 58V125.2C662.228 126.693 662.741 128 663.768 129.12C664.888 130.147 666.195 130.66 667.688 130.66ZM767.106 142V41.2H782.646L856.566 129.12V41.2H867.906V142H852.366L778.446 54.08V142H767.106Z" fill="white"/><defs><clipPath id="clip0_2101_18"><rect width="158" height="158" fill="white" transform="translate(0 9)"/></clipPath></defs></svg>
+  <svg class="small-logo" width="336" height="72" viewBox="0 0 336 72" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_101_131" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="63" height="63"><g clip-path="url(#clip0_101_131)"><path d="M31.0672 5.47153L57.9722 21.0051V52.0723L31.0672 67.6059L4.16222 52.0723V21.0051L31.0672 5.47153Z" fill="#BD3455"/></g></mask><g mask="url(#mask0_101_131)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.83137 1.539H5.1123V47.6365L9.83137 42.6397V1.539ZM9.83137 46.0762L5.1123 51.0729V80.1902H9.83137V46.0762ZM14.5504 41.0794L19.2695 36.0827V80.1902H14.5504V41.0794ZM19.2695 32.6462L14.5504 37.643V1.539H19.2695V32.6462ZM23.9886 38.2063V80.1902H28.7077V42.9243L23.9886 38.2063ZM28.7077 39.5878L23.9886 34.8697V1.539H28.7077V39.5878ZM33.4267 45.7569V80.1902H38.1458V41.9072L33.4267 45.7569ZM38.1458 38.8621L33.4267 42.7118V1.539H38.1458V38.8621ZM42.8649 38.0574V80.1902H47.5839V34.2077L42.8649 38.0574ZM47.5839 31.1626L42.8649 35.0124V1.539H47.5839V31.1626ZM52.303 30.358V80.1902H57.0221V26.5082L52.303 30.358ZM57.0221 23.4632L52.303 27.3129V1.539H57.0221V23.4632Z" fill="white"/></g><path d="M65.175 55V19H70.725L97.125 50.4V19H101.175V55H95.625L69.225 23.6V55H65.175ZM106.877 55V19H139.727V23.05H110.927V34.95H134.077V39.05H110.927V50.95H139.727V55H106.877ZM150.958 55C149.858 55 148.841 54.7333 147.908 54.2C147.008 53.6667 146.291 52.95 145.758 52.05C145.224 51.1167 144.958 50.1 144.958 49V19H149.008V49C149.008 49.5333 149.191 50 149.558 50.4C149.958 50.7667 150.424 50.95 150.958 50.95H174.958C175.491 50.95 175.941 50.7667 176.308 50.4C176.708 50 176.908 49.5333 176.908 49V19H180.958V49C180.958 50.1 180.691 51.1167 180.158 52.05C179.624 52.95 178.891 53.6667 177.958 54.2C177.058 54.7333 176.058 55 174.958 55H150.958ZM216.864 55L205.114 41H210.414L222.214 54.95V55H216.864ZM186.464 55V19.05H216.464C217.564 19.05 218.564 19.3333 219.464 19.9C220.397 20.4333 221.131 21.15 221.664 22.05C222.197 22.95 222.464 23.95 222.464 25.05V35.6C222.464 36.7 222.197 37.7 221.664 38.6C221.131 39.5 220.397 40.2333 219.464 40.8C218.564 41.3333 217.564 41.6 216.464 41.6H190.514V55H186.464ZM192.464 37.5H216.464C216.997 37.5 217.447 37.3167 217.814 36.95C218.214 36.5833 218.414 36.1333 218.414 35.6V25.05C218.414 24.5167 218.214 24.0667 217.814 23.7C217.447 23.3 216.997 23.1 216.464 23.1H192.464C191.931 23.1 191.464 23.3 191.064 23.7C190.697 24.0667 190.514 24.5167 190.514 25.05V35.6C190.514 36.1333 190.697 36.5833 191.064 36.95C191.464 37.3167 191.931 37.5 192.464 37.5ZM228.224 55V19H232.324V55H228.224ZM244.317 55C243.217 55 242.201 54.7333 241.267 54.2C240.367 53.6667 239.651 52.95 239.117 52.05C238.584 51.1167 238.317 50.1 238.317 49V25C238.317 23.9 238.584 22.9 239.117 22C239.651 21.0667 240.367 20.3333 241.267 19.8C242.201 19.2667 243.217 19 244.317 19H268.317C269.417 19 270.417 19.2667 271.317 19.8C272.251 20.3333 272.984 21.0667 273.517 22C274.051 22.9 274.317 23.9 274.317 25V49C274.317 50.1 274.051 51.1167 273.517 52.05C272.984 52.95 272.251 53.6667 271.317 54.2C270.417 54.7333 269.417 55 268.317 55H244.317ZM244.317 50.95H268.317C268.851 50.95 269.301 50.7667 269.667 50.4C270.067 50 270.267 49.5333 270.267 49V25C270.267 24.4667 270.067 24.0167 269.667 23.65C269.301 23.25 268.851 23.05 268.317 23.05H244.317C243.784 23.05 243.317 23.25 242.917 23.65C242.551 24.0167 242.367 24.4667 242.367 25V49C242.367 49.5333 242.551 50 242.917 50.4C243.317 50.7667 243.784 50.95 244.317 50.95ZM279.823 55V19H285.373L311.773 50.4V19H315.823V55H310.273L283.873 23.6V55H279.823Z" fill="white"/><defs><clipPath id="clip0_101_131"><rect width="62.1344" height="62.1344" fill="white" transform="translate(0 5.47153)"/></clipPath></defs></svg>
+  <p class="description">Neurion is a next-generation quantitative hedge fund that harnesses artificial intelligence and advanced machine learning to identify unique investment opportunities in global markets. Our proprietary AI systems continuously evolve and adapt, processing vast amounts of data to generate superior risk-adjusted returns.</p>
+  <a class="contact" href="#" id="contactLink">contact</a>
+</div>
 
-      <svg class="big-logo" width="876" height="176" viewBox="0 0 876 176" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <mask id="mask0_2101_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="9" width="158" height="158">
-        <g clip-path="url(#clip0_2101_18)">
-        <path d="M79 9L147.416 48.5V127.5L79 167L10.584 127.5V48.5L79 9Z" fill="#BD3455"/>
-        </g>
-        </mask>
-        <g mask="url(#mask0_2101_18)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 -1H13V116.22L25 103.514V-1ZM25 112.253L13 124.959V199H25V112.253ZM37 99.5464L49 86.8403V199H37V99.5464ZM49 78.1018L37 90.8079V-1H49V78.1018ZM61 92.2403V199H73V104.238L61 92.2403ZM73 95.7534L61 83.7559V-1H73V95.7534ZM85 111.441V199H97V101.651L85 111.441ZM97 93.908L85 103.697V-1H97V93.908ZM109 91.8619V199H121V82.0725L109 91.8619ZM121 74.3292L109 84.1186V-1H121V74.3292ZM133 72.2831V199H145V62.4937L133 72.2831ZM145 54.7505L133 64.5399V-1H145V54.7505Z" fill="white"/>
-        </g>
-        <path d="M166.09 142V41.2H181.63L255.55 129.12V41.2H266.89V142H251.35L177.43 54.08V142H166.09ZM282.854 142V41.2H374.834V52.54H294.194V85.86H359.014V97.34H294.194V130.66H374.834V142H282.854ZM406.282 142C403.202 142 400.355 141.253 397.742 139.76C395.222 138.267 393.215 136.26 391.722 133.74C390.229 131.127 389.482 128.28 389.482 125.2V41.2H400.822V125.2C400.822 126.693 401.335 128 402.362 129.12C403.482 130.147 404.789 130.66 406.282 130.66H473.482C474.975 130.66 476.235 130.147 477.262 129.12C478.382 128 478.942 126.693 478.942 125.2V41.2H490.282V125.2C490.282 128.28 489.535 131.127 488.042 133.74C486.549 136.26 484.495 138.267 481.882 139.76C479.362 141.253 476.562 142 473.482 142H406.282ZM590.819 142L557.919 102.8H572.759L605.799 141.86V142H590.819ZM505.699 142V41.34H589.699C592.779 41.34 595.579 42.1333 598.099 43.72C600.713 45.2133 602.766 47.22 604.259 49.74C605.753 52.26 606.499 55.06 606.499 58.14V87.68C606.499 90.76 605.753 93.56 604.259 96.08C602.766 98.6 600.713 100.653 598.099 102.24C595.579 103.733 592.779 104.48 589.699 104.48H517.039V142H505.699ZM522.499 93H589.699C591.193 93 592.453 92.4867 593.479 91.46C594.599 90.4333 595.159 89.1733 595.159 87.68V58.14C595.159 56.6467 594.599 55.3867 593.479 54.36C592.453 53.24 591.193 52.68 589.699 52.68H522.499C521.006 52.68 519.699 53.24 518.579 54.36C517.553 55.3867 517.039 56.6467 517.039 58.14V87.68C517.039 89.1733 517.553 90.4333 518.579 91.46C519.699 92.4867 521.006 93 522.499 93ZM622.627 142V41.2H634.107V142H622.627ZM667.688 142C664.608 142 661.761 141.253 659.148 139.76C656.628 138.267 654.621 136.26 653.128 133.74C651.635 131.127 650.888 128.28 650.888 125.2V58C650.888 54.92 651.635 52.12 653.128 49.6C654.621 46.9867 656.628 44.9333 659.148 43.44C661.761 41.9467 664.608 41.2 667.688 41.2H734.888C737.968 41.2 740.768 41.9467 743.288 43.44C745.901 44.9333 747.955 46.9867 749.448 49.6C750.941 52.12 751.688 54.92 751.688 58V125.2C751.688 128.28 750.941 131.127 749.448 133.74C747.955 136.26 745.901 138.267 743.288 139.76C740.768 141.253 737.968 142 734.888 142H667.688ZM667.688 130.66H734.888C736.381 130.66 737.641 130.147 738.668 129.12C739.788 128 740.348 126.693 740.348 125.2V58C740.348 56.5067 739.788 55.2467 738.668 54.22C737.641 53.1 736.381 52.54 734.888 52.54H667.688C666.195 52.54 664.888 53.1 663.768 54.22C662.741 55.2467 662.228 56.5067 662.228 58V125.2C662.228 126.693 662.741 128 663.768 129.12C664.888 130.147 666.195 130.66 667.688 130.66ZM767.106 142V41.2H782.646L856.566 129.12V41.2H867.906V142H852.366L778.446 54.08V142H767.106Z" fill="white"/>
-        <defs>
-        <clipPath id="clip0_2101_18">
-        <rect width="158" height="158" fill="white" transform="translate(0 9)"/>
-        </clipPath>
-        </defs>
-        </svg>
-        
+<script>
+// ─────────────────────────────────────────────
+// Binary Streams Animation
+// ─────────────────────────────────────────────
+(function() {
+  const canvas = document.getElementById('flow');
+  const ctx = canvas.getContext('2d');
+  const content = document.getElementById('content');
+  const contactLink = document.getElementById('contactLink');
 
-        <svg class="small-logo" width="336" height="72" viewBox="0 0 336 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask0_101_131" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="63" height="63">
-          <g clip-path="url(#clip0_101_131)">
-          <path d="M31.0672 5.47153L57.9722 21.0051V52.0723L31.0672 67.6059L4.16222 52.0723V21.0051L31.0672 5.47153Z" fill="#BD3455"/>
-          </g>
-          </mask>
-          <g mask="url(#mask0_101_131)">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.83137 1.539H5.1123V47.6365L9.83137 42.6397V1.539ZM9.83137 46.0762L5.1123 51.0729V80.1902H9.83137V46.0762ZM14.5504 41.0794L19.2695 36.0827V80.1902H14.5504V41.0794ZM19.2695 32.6462L14.5504 37.643V1.539H19.2695V32.6462ZM23.9886 38.2063V80.1902H28.7077V42.9243L23.9886 38.2063ZM28.7077 39.5878L23.9886 34.8697V1.539H28.7077V39.5878ZM33.4267 45.7569V80.1902H38.1458V41.9072L33.4267 45.7569ZM38.1458 38.8621L33.4267 42.7118V1.539H38.1458V38.8621ZM42.8649 38.0574V80.1902H47.5839V34.2077L42.8649 38.0574ZM47.5839 31.1626L42.8649 35.0124V1.539H47.5839V31.1626ZM52.303 30.358V80.1902H57.0221V26.5082L52.303 30.358ZM57.0221 23.4632L52.303 27.3129V1.539H57.0221V23.4632Z" fill="white"/>
-          </g>
-          <path d="M65.175 55V19H70.725L97.125 50.4V19H101.175V55H95.625L69.225 23.6V55H65.175ZM106.877 55V19H139.727V23.05H110.927V34.95H134.077V39.05H110.927V50.95H139.727V55H106.877ZM150.958 55C149.858 55 148.841 54.7333 147.908 54.2C147.008 53.6667 146.291 52.95 145.758 52.05C145.224 51.1167 144.958 50.1 144.958 49V19H149.008V49C149.008 49.5333 149.191 50 149.558 50.4C149.958 50.7667 150.424 50.95 150.958 50.95H174.958C175.491 50.95 175.941 50.7667 176.308 50.4C176.708 50 176.908 49.5333 176.908 49V19H180.958V49C180.958 50.1 180.691 51.1167 180.158 52.05C179.624 52.95 178.891 53.6667 177.958 54.2C177.058 54.7333 176.058 55 174.958 55H150.958ZM216.864 55L205.114 41H210.414L222.214 54.95V55H216.864ZM186.464 55V19.05H216.464C217.564 19.05 218.564 19.3333 219.464 19.9C220.397 20.4333 221.131 21.15 221.664 22.05C222.197 22.95 222.464 23.95 222.464 25.05V35.6C222.464 36.7 222.197 37.7 221.664 38.6C221.131 39.5 220.397 40.2333 219.464 40.8C218.564 41.3333 217.564 41.6 216.464 41.6H190.514V55H186.464ZM192.464 37.5H216.464C216.997 37.5 217.447 37.3167 217.814 36.95C218.214 36.5833 218.414 36.1333 218.414 35.6V25.05C218.414 24.5167 218.214 24.0667 217.814 23.7C217.447 23.3 216.997 23.1 216.464 23.1H192.464C191.931 23.1 191.464 23.3 191.064 23.7C190.697 24.0667 190.514 24.5167 190.514 25.05V35.6C190.514 36.1333 190.697 36.5833 191.064 36.95C191.464 37.3167 191.931 37.5 192.464 37.5ZM228.224 55V19H232.324V55H228.224ZM244.317 55C243.217 55 242.201 54.7333 241.267 54.2C240.367 53.6667 239.651 52.95 239.117 52.05C238.584 51.1167 238.317 50.1 238.317 49V25C238.317 23.9 238.584 22.9 239.117 22C239.651 21.0667 240.367 20.3333 241.267 19.8C242.201 19.2667 243.217 19 244.317 19H268.317C269.417 19 270.417 19.2667 271.317 19.8C272.251 20.3333 272.984 21.0667 273.517 22C274.051 22.9 274.317 23.9 274.317 25V49C274.317 50.1 274.051 51.1167 273.517 52.05C272.984 52.95 272.251 53.6667 271.317 54.2C270.417 54.7333 269.417 55 268.317 55H244.317ZM244.317 50.95H268.317C268.851 50.95 269.301 50.7667 269.667 50.4C270.067 50 270.267 49.5333 270.267 49V25C270.267 24.4667 270.067 24.0167 269.667 23.65C269.301 23.25 268.851 23.05 268.317 23.05H244.317C243.784 23.05 243.317 23.25 242.917 23.65C242.551 24.0167 242.367 24.4667 242.367 25V49C242.367 49.5333 242.551 50 242.917 50.4C243.317 50.7667 243.784 50.95 244.317 50.95ZM279.823 55V19H285.373L311.773 50.4V19H315.823V55H310.273L283.873 23.6V55H279.823Z" fill="white"/>
-          <defs>
-          <clipPath id="clip0_101_131">
-          <rect width="62.1344" height="62.1344" fill="white" transform="translate(0 5.47153)"/>
-          </clipPath>
-          </defs>
-          </svg>
-          
-    </div>
-    <div class='intro'>
-    <p>
-      Neurion is a next-generation quantitative hedge fund that harnesses artificial intelligence and advanced machine learning to identify unique investment opportunities in global markets. Our proprietary AI systems continuously evolve and adapt, processing vast amounts of data to generate superior risk-adjusted returns.
-    </p>
-      <p>
-        <a id='email' href='#'>contact</a>
-      </p>
-    </div>
-  </div>
+  contactLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = atob('bWFpbHRvOmNvbnRhY3RAbmV1cmlvbi5haQ==');
+  });
+
+  let W, H, dpr;
+  let mouse = { x: -9999, y: -9999 };
+  let smoothMouse = { x: -9999, y: -9999 };
+
+  // ─────────────────────────────────────────────
+  // Binary character set
+  // ─────────────────────────────────────────────
+  const CHARS = '0011001101ABCDEF';
+  const MOUSE_RADIUS = 150;
+
+  // Aurora-matched color palette
+  const ROW_COLORS = [
+    { r: 15, g: 60, b: 120 },   // deep blue
+    { r: 10, g: 90, b: 110 },   // teal
+    { r: 20, g: 130, b: 160 },  // cyan
+    { r: 8, g: 70, b: 90 },     // deep teal
+    { r: 20, g: 100, b: 80 }    // green-teal
+  ];
+
+  function randomChar() {
+    return CHARS[Math.floor(Math.random() * CHARS.length)];
+  }
+
+  // ─────────────────────────────────────────────
+  // Stream Rows
+  // ─────────────────────────────────────────────
+  let rows = [];
+  let highlights = [];
+
+  class StreamRow {
+    constructor(y, index, totalRows) {
+      this.y = y;
+      // Depth: 0 = background, 1 = foreground
+      this.depth = Math.random();
+      this.speed = 0.3 + Math.random() * 1.2;
+      this.baseOpacity = 0.12 + Math.random() * 0.15;
+      this.fontSize = 9 + this.depth * 3; // 9-12px range based on depth
+      this.baseOpacity *= (0.6 + this.depth * 0.4);
+      this.charWidth = this.fontSize * 0.62;
+      this.offset = 0;
+      this.chars = [];
+      this.totalWidth = 0;
+      // Assign color from aurora palette
+      const color = ROW_COLORS[Math.floor(Math.random() * ROW_COLORS.length)];
+      this.r = color.r;
+      this.g = color.g;
+      this.b = color.b;
+      this.generateChars();
+    }
+
+    generateChars() {
+      // Generate enough characters to fill the screen plus a buffer
+      const needed = Math.ceil((W + 200) / this.charWidth) + 20;
+      this.chars = [];
+      for (let i = 0; i < needed; i++) {
+        this.chars.push(randomChar());
+      }
+      this.totalWidth = this.chars.length * this.charWidth;
+    }
+
+    update() {
+      this.offset += this.speed;
+      // When scrolled past one character width, shift and add new char
+      if (this.offset >= this.charWidth) {
+        const shifts = Math.floor(this.offset / this.charWidth);
+        for (let s = 0; s < shifts; s++) {
+          this.chars.shift();
+          this.chars.push(randomChar());
+        }
+        this.offset -= shifts * this.charWidth;
+      }
+    }
+  }
+
+  // ─────────────────────────────────────────────
+  // Pattern Highlights
+  // ─────────────────────────────────────────────
+  class Highlight {
+    constructor(rowIndex, charStart, length) {
+      this.rowIndex = rowIndex;
+      this.charStart = charStart;
+      this.length = length;
+      this.birth = 0;
+      this.delay = 0;
+      this.duration = 4500;
+      this.alive = true;
+      this.progress = 0;
+    }
+
+    update(elapsed) {
+      if (!this.birth) this.birth = elapsed;
+      const effective = elapsed - this.birth - this.delay;
+      if (effective < 0) { this.progress = 0; return; }
+      this.progress = effective / this.duration;
+      if (this.progress >= 1) this.alive = false;
+    }
+  }
+
+  // ─────────────────────────────────────────────
+  // Timing for events
+  // ─────────────────────────────────────────────
+  let lastHighlightTime = 0;
+  let nextHighlightInterval = 0;
+
+  // ─────────────────────────────────────────────
+  // Setup
+  // ─────────────────────────────────────────────
+  function initRows() {
+    rows = [];
+    const rowCount = 15 + Math.floor(Math.random() * 11); // 15-25 rows
+    const spacing = H / (rowCount + 1);
+    for (let i = 0; i < rowCount; i++) {
+      const y = spacing * (i + 1) + (Math.random() - 0.5) * (spacing * 0.3);
+      rows.push(new StreamRow(y, i, rowCount));
+    }
+    // Sort by depth so background rows draw first
+    rows.sort(function(a, b) { return a.depth - b.depth; });
+  }
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (rows.length === 0) {
+      initRows();
+    } else {
+      // Regenerate chars for new width
+      for (let i = 0; i < rows.length; i++) {
+        rows[i].generateChars();
+      }
+    }
+  }
+
+  window.addEventListener('resize', resize);
+
+  document.addEventListener('mousemove', function(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  document.addEventListener('mouseleave', function() {
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+
+  document.addEventListener('touchmove', function(e) {
+    if (e.touches.length > 0) {
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchend', function() {
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+
+  // ─────────────────────────────────────────────
+  // Vignette
+  // ─────────────────────────────────────────────
+  function drawVignette() {
+    const maxDim = Math.max(W, H);
+    const grd = ctx.createRadialGradient(W / 2, H / 2, maxDim * 0.2, W / 2, H / 2, maxDim * 0.75);
+    grd.addColorStop(0, 'rgba(6,13,24,0)');
+    grd.addColorStop(0.5, 'rgba(6,13,24,0)');
+    grd.addColorStop(0.8, 'rgba(6,13,24,0.4)');
+    grd.addColorStop(1, 'rgba(6,13,24,0.85)');
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  // ─────────────────────────────────────────────
+  // Animation loop
+  // ─────────────────────────────────────────────
+  let startTime = 0;
+  let fadeStarted = false;
+
+  function animate(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+    const elapsed = timestamp - startTime;
+
+    // Smooth mouse tracking — snap on first entry, then lerp
+    if (mouse.x > -9000 && smoothMouse.x < -9000) {
+      smoothMouse.x = mouse.x;
+      smoothMouse.y = mouse.y;
+    } else {
+      smoothMouse.x += (mouse.x - smoothMouse.x) * 0.08;
+      smoothMouse.y += (mouse.y - smoothMouse.y) * 0.08;
+    }
+
+    // Global fade-in over 3 seconds
+    const globalAlpha = Math.min(1, elapsed / 3000);
+
+    // Content fade-in at 0.5s
+    if (!fadeStarted && elapsed > 500) {
+      content.classList.add('visible');
+      fadeStarted = true;
+    }
+
+    // Clear
+    ctx.fillStyle = '#060d18';
+    ctx.fillRect(0, 0, W, H);
+
+    // Subtle center glow for depth
+    const cGrd = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, Math.max(W, H) * 0.5);
+    cGrd.addColorStop(0, 'rgba(10,25,50,0.15)');
+    cGrd.addColorStop(0.6, 'rgba(8,18,38,0.06)');
+    cGrd.addColorStop(1, 'rgba(6,13,24,0)');
+    ctx.fillStyle = cGrd;
+    ctx.fillRect(0, 0, W, H);
+
+    // ─── Spawn highlights — burst of 6-8 across different rows ───
+    if (elapsed - lastHighlightTime > nextHighlightInterval) {
+      const count = 10 + Math.floor(Math.random() * 11);
+      const used = {};
+      for (let b = 0; b < count; b++) {
+        let ri = Math.floor(Math.random() * rows.length);
+        let tries = 0;
+        while (used[ri] && tries < 6) { ri = Math.floor(Math.random() * rows.length); tries++; }
+        used[ri] = true;
+        const row = rows[ri];
+        const hlLength = 12 + Math.floor(Math.random() * 20);
+        const charStart = Math.floor(Math.random() * Math.max(1, row.chars.length - hlLength));
+        const hl = new Highlight(ri, charStart, hlLength);
+        hl.delay = b * (200 + Math.random() * 300);
+        highlights.push(hl);
+      }
+      lastHighlightTime = elapsed;
+      nextHighlightInterval = 2500 + Math.random() * 3500;
+    }
+
+    // ─── Update highlights ───
+    for (let i = highlights.length - 1; i >= 0; i--) {
+      highlights[i].update(elapsed);
+      if (!highlights[i].alive) {
+        highlights.splice(i, 1);
+      }
+    }
+
+    // ─── Update and draw rows ───
+    ctx.textBaseline = 'middle';
+
+    for (let r = 0; r < rows.length; r++) {
+      const row = rows[r];
+
+      row.offset += row.speed;
+      if (row.offset >= row.charWidth) {
+        const shifts = Math.floor(row.offset / row.charWidth);
+        for (let s = 0; s < shifts; s++) {
+          row.chars.shift();
+          row.chars.push(randomChar());
+        }
+        row.offset -= shifts * row.charWidth;
+      }
+
+      ctx.font = '300 ' + row.fontSize + 'px "Inter", monospace';
+
+      // Build highlight map for this row
+      const hlMap = {};
+      for (let h = 0; h < highlights.length; h++) {
+        const hl = highlights[h];
+        if (hl.rowIndex === r) {
+          // Bell curve: peak at 0.15, fade out smoothly
+          const p = hl.progress;
+          const intensity = p < 0.15 ? p / 0.15 : Math.max(0, 1 - (p - 0.15) / 0.85);
+          for (let c = hl.charStart; c < hl.charStart + hl.length; c++) {
+            if (c >= 0 && c < row.chars.length) {
+              // Soft edges on highlight segment
+              const edgeDist = Math.min(c - hl.charStart, hl.charStart + hl.length - 1 - c);
+              const edgeFade = Math.min(1, edgeDist / 2);
+              const val = intensity * edgeFade;
+              if (!hlMap[c] || hlMap[c] < val) hlMap[c] = val;
+            }
+          }
+        }
+      }
+
+      // Draw each character
+      for (let i = 0; i < row.chars.length; i++) {
+        const x = i * row.charWidth - row.offset;
+        if (x < -row.charWidth || x > W + row.charWidth) continue;
+
+        let alpha = row.baseOpacity;
+        let r2 = row.r, g2 = row.g, b2 = row.b;
+
+        // Highlight glow (cyan)
+        if (hlMap[i]) {
+          const f = hlMap[i];
+          r2 = Math.round(r2 + (40 - r2) * f * 0.8);
+          g2 = Math.round(g2 + (190 - g2) * f * 0.8);
+          b2 = Math.round(b2 + (220 - b2) * f * 0.8);
+          alpha += f * 0.35;
+        }
+
+        alpha = Math.min(alpha, 0.9) * globalAlpha;
+
+        ctx.fillStyle = 'rgba(' + r2 + ',' + g2 + ',' + b2 + ',' + alpha.toFixed(4) + ')';
+        ctx.fillText(row.chars[i], x, row.y);
+      }
+
+      // Subtle glow behind highlighted segments
+      for (let h = 0; h < highlights.length; h++) {
+        const hl = highlights[h];
+        if (hl.rowIndex !== r) continue;
+        const p = hl.progress;
+        const intensity = p < 0.15 ? p / 0.15 : Math.max(0, 1 - (p - 0.15) / 0.85);
+        if (intensity < 0.01) continue;
+        const x1 = hl.charStart * row.charWidth - row.offset;
+        const x2 = (hl.charStart + hl.length) * row.charWidth - row.offset;
+        const cx = (x1 + x2) / 2;
+        const hw = (x2 - x1) / 2 + 20;
+        const glowGrad = ctx.createRadialGradient(cx, row.y, 0, cx, row.y, hw);
+        const ga = (intensity * 0.07 * globalAlpha).toFixed(4);
+        glowGrad.addColorStop(0, 'rgba(60,180,220,' + ga + ')');
+        glowGrad.addColorStop(1, 'rgba(60,180,220,0)');
+        ctx.fillStyle = glowGrad;
+        ctx.fillRect(cx - hw, row.y - 12, hw * 2, 24);
+      }
+    }
+
+    // Vignette overlay
+    ctx.globalAlpha = 1;
+    drawVignette();
+
+    requestAnimationFrame(animate);
+  }
+
+  resize();
+  requestAnimationFrame(animate);
+})();
+</script>
 </body>
-
+</html>

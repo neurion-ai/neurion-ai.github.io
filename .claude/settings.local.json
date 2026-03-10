@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(python3:*)",
+      "Bash(do echo:*)",
+      "Bash(xxd:*)",
+      "Bash(node:*)",
+      "Bash(open:*)"
+    ]
+  }
+}

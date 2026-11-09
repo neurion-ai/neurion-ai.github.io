@@ -2,394 +2,525 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Neurion — Quantitative AI Hedge Fund</title>
 <meta name="description" content="Neurion is a next-generation quantitative hedge fund harnessing artificial intelligence and advanced machine learning for global markets.">
+<meta name="theme-color" content="#05070b">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://neurion.ai/">
+<meta property="og:title" content="Neurion — Quantitative AI Hedge Fund">
+<meta property="og:description" content="Finding order in the noise of global markets.">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://neurion.ai/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%2305070b'/%3E%3Cg transform='translate(6 6)'%3E%3Crect x='1.62' y='1.62' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='1.62' y='8.82' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='1.62' y='16.02' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='1.62' y='23.22' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='1.62' y='30.42' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='8.82' y='1.62' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='8.82' y='8.82' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='8.82' y='16.02' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='8.82' y='23.22' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='8.82' y='30.42' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='16.02' y='1.62' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='16.02' y='8.82' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='16.02' y='16.02' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='16.02' y='23.22' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='16.02' y='30.42' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='23.22' y='1.62' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='23.22' y='8.82' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='23.22' y='16.02' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='23.22' y='23.22' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='23.22' y='30.42' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='30.42' y='1.62' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='30.42' y='8.82' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='30.42' y='16.02' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5'/%3E%3Crect x='30.42' y='23.22' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3Crect x='30.42' y='30.42' width='3.96' height='3.96' rx='0.87' fill='%23eef1f5' opacity='0.22'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS0D4EPXTJ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HS0D4EPXTJ');</script>
+<script>document.documentElement.classList.add('js')</script>
 <style>
+:root{
+  --bg:#05070b;
+  --bg-rgb:5,7,11;
+  --ink:#eef1f5;
+  --ink-2:rgba(238,241,245,.62);
+  --ink-3:rgba(238,241,245,.38);
+  --line:rgba(238,241,245,.09);
+  --accent:#6ad1f0;
+  --sans:'Geist',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Geist Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  --pad:clamp(20px,5vw,72px);
+  --max:1360px;
+  --ease:cubic-bezier(.2,.7,.15,1);
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;overflow:hidden;background:#060d18}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#fff;display:flex;align-items:center;justify-content:center}
-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
-.container{position:relative;z-index:1;text-align:center;padding:2rem;opacity:0;transition:opacity 2s ease}
-.container.visible{opacity:1}
-.big-logo{display:block;margin:0 auto 2.5rem;filter:drop-shadow(0 0 40px rgba(0,0,0,0.6));max-width:90vw;height:auto}
-.small-logo{display:none;margin:0 auto 2rem;filter:drop-shadow(0 0 30px rgba(0,0,0,0.6));max-width:85vw;height:auto}
-.description{font-weight:300;font-size:15px;line-height:1.85;max-width:540px;margin:0 auto 2.5rem;color:rgba(255,255,255,0.55);text-shadow:0 0 40px rgba(0,0,0,0.8)}
-.contact{display:inline-block;font-weight:300;font-size:13px;letter-spacing:0.12em;color:rgba(255,255,255,0.35);text-decoration:none;text-shadow:0 0 40px rgba(0,0,0,0.8);transition:color 0.5s ease;text-transform:lowercase}
-.contact:hover{color:rgba(255,255,255,0.65)}
-@media(max-width:640px){
-  .big-logo{display:none}
-  .small-logo{display:block}
-  .description{font-size:14px;line-height:1.75;max-width:90vw;margin-bottom:2rem}
+html{background:var(--bg);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.55;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;overflow-x:hidden}
+::selection{background:var(--accent);color:var(--bg)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-offset:4px;border-radius:2px}
+
+/* Film grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+
+/* ───────── Header ───────── */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .5s var(--ease),border-color .5s var(--ease),backdrop-filter .5s;border-bottom:1px solid transparent}
+.site-header.scrolled{background:rgba(var(--bg-rgb),.72);-webkit-backdrop-filter:blur(16px) saturate(140%);backdrop-filter:blur(16px) saturate(140%);border-bottom-color:var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center}
+.brand svg{height:24px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:clamp(18px,3vw,40px)}
+.nav a{color:var(--ink-2);transition:color .3s}
+.nav a:hover{color:var(--ink)}
+.nav .pill{color:var(--ink);border:1px solid rgba(238,241,245,.22);padding:9px 16px;border-radius:999px;transition:border-color .3s,background .3s,color .3s}
+.nav .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ───────── Hero ───────── */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-2;display:block}
+.hero-shade{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(var(--bg-rgb),1) 0%,rgba(var(--bg-rgb),.92) 26%,rgba(var(--bg-rgb),.35) 50%,rgba(var(--bg-rgb),0) 64%),
+    linear-gradient(180deg,rgba(var(--bg-rgb),.6) 0%,rgba(var(--bg-rgb),0) 18%,rgba(var(--bg-rgb),0) 78%,rgba(var(--bg-rgb),1) 100%)}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:120px}
+h1{font-weight:300;font-size:clamp(2.9rem,7.4vw,7rem);line-height:.96;letter-spacing:-.048em;max-width:9.6em;margin-left:-.04em}
+h1 .dim{color:var(--ink-3)}
+.lede{margin-top:clamp(24px,3vw,36px);max-width:33rem;font-size:clamp(16px,1.35vw,18.5px);line-height:1.6;color:var(--ink-2);letter-spacing:-.005em}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:clamp(32px,4vw,48px)}
+.btn{display:inline-flex;align-items:center;gap:12px;height:50px;padding:0 22px 0 24px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:15px;font-weight:500;letter-spacing:-.01em;transition:transform .4s var(--ease),background .3s}
+.btn:hover{background:#fff;transform:translateY(-1px)}
+.btn .arr{transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(3px)}
+
+
+/* ───────── Sections ───────── */
+section{position:relative}
+.section{padding-block:clamp(96px,13vw,190px)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,32px)}
+.label{grid-column:1 / span 3;color:var(--ink-3);display:flex;gap:14px;align-items:baseline;padding-top:.7em}
+.label .n{color:var(--accent)}
+.body{grid-column:4 / span 9}
+.statement{font-weight:300;font-size:clamp(1.65rem,3.25vw,3rem);line-height:1.16;letter-spacing:-.032em;max-width:22em}
+.statement .dim{color:var(--ink-3)}
+
+.contact{border-top:1px solid var(--line)}
+.contact-lead{color:var(--ink-2);font-size:clamp(16px,1.35vw,18.5px);margin-bottom:clamp(20px,2.5vw,32px)}
+.email{display:inline-flex;align-items:center;gap:.28em;font-weight:300;font-size:clamp(2.1rem,6.6vw,6.25rem);line-height:1.02;letter-spacing:-.045em;position:relative;padding-bottom:.08em;word-break:break-all}
+.email::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);transition:background .5s var(--ease)}
+.email:hover::after{background:var(--ink-2)}
+.email .arr{display:inline-block;font-size:.7em;color:var(--ink-3);transition:transform .6s var(--ease),color .4s}
+.email:hover .arr{transform:translate(.08em,-.08em);color:var(--accent)}
+
+/* ───────── Footer ───────── */
+.site-footer{border-top:1px solid var(--line);padding-block:40px 48px;color:var(--ink-3);font-size:13px}
+.site-footer .grid{row-gap:24px;align-items:start}
+.site-footer .copy{grid-column:1 / span 3;color:var(--ink-2)}
+.site-footer .legal{grid-column:4 / span 6;line-height:1.65;max-width:56ch}
+.site-footer .top{grid-column:10 / span 3;justify-self:end;color:var(--ink-2);transition:color .3s}
+.site-footer .top:hover{color:var(--ink)}
+
+/* ───────── Reveal ───────── */
+.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ───────── Responsive ───────── */
+@media (max-width:960px){
+  .label{grid-column:1 / -1;margin-bottom:28px;padding-top:0}
+  .body{grid-column:1 / -1}
+  .site-footer .copy,.site-footer .legal{grid-column:1 / -1}
+  .site-footer .top{grid-column:1 / -1;justify-self:start}
+}
+@media (max-width:760px){
+  .hero{align-items:flex-end}
+  .hero .wrap{padding-top:36svh;padding-bottom:96px}
+  h1{font-size:clamp(2.6rem,12vw,3.4rem)}
+  .hero-shade{background:linear-gradient(180deg,rgba(var(--bg-rgb),.55) 0%,rgba(var(--bg-rgb),0) 14%,rgba(var(--bg-rgb),0) 26%,rgba(var(--bg-rgb),.88) 50%,rgba(var(--bg-rgb),1) 100%)}
+  .nav .hide-sm{display:none}
+  .brand svg{height:21px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
 }
 </style>
 </head>
 <body>
-<canvas id="flow"></canvas>
-<div class="container" id="content">
-  <svg class="big-logo" width="876" height="176" viewBox="0 0 876 176" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_2101_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="9" width="158" height="158"><g clip-path="url(#clip0_2101_18)"><path d="M79 9L147.416 48.5V127.5L79 167L10.584 127.5V48.5L79 9Z" fill="#BD3455"/></g></mask><g mask="url(#mask0_2101_18)"><path fill-rule="evenodd" clip-rule="evenodd" d="M25 -1H13V116.22L25 103.514V-1ZM25 112.253L13 124.959V199H25V112.253ZM37 99.5464L49 86.8403V199H37V99.5464ZM49 78.1018L37 90.8079V-1H49V78.1018ZM61 92.2403V199H73V104.238L61 92.2403ZM73 95.7534L61 83.7559V-1H73V95.7534ZM85 111.441V199H97V101.651L85 111.441ZM97 93.908L85 103.697V-1H97V93.908ZM109 91.8619V199H121V82.0725L109 91.8619ZM121 74.3292L109 84.1186V-1H121V74.3292ZM133 72.2831V199H145V62.4937L133 72.2831ZM145 54.7505L133 64.5399V-1H145V54.7505Z" fill="white"/></g><path d="M166.09 142V41.2H181.63L255.55 129.12V41.2H266.89V142H251.35L177.43 54.08V142H166.09ZM282.854 142V41.2H374.834V52.54H294.194V85.86H359.014V97.34H294.194V130.66H374.834V142H282.854ZM406.282 142C403.202 142 400.355 141.253 397.742 139.76C395.222 138.267 393.215 136.26 391.722 133.74C390.229 131.127 389.482 128.28 389.482 125.2V41.2H400.822V125.2C400.822 126.693 401.335 128 402.362 129.12C403.482 130.147 404.789 130.66 406.282 130.66H473.482C474.975 130.66 476.235 130.147 477.262 129.12C478.382 128 478.942 126.693 478.942 125.2V41.2H490.282V125.2C490.282 128.28 489.535 131.127 488.042 133.74C486.549 136.26 484.495 138.267 481.882 139.76C479.362 141.253 476.562 142 473.482 142H406.282ZM590.819 142L557.919 102.8H572.759L605.799 141.86V142H590.819ZM505.699 142V41.34H589.699C592.779 41.34 595.579 42.1333 598.099 43.72C600.713 45.2133 602.766 47.22 604.259 49.74C605.753 52.26 606.499 55.06 606.499 58.14V87.68C606.499 90.76 605.753 93.56 604.259 96.08C602.766 98.6 600.713 100.653 598.099 102.24C595.579 103.733 592.779 104.48 589.699 104.48H517.039V142H505.699ZM522.499 93H589.699C591.193 93 592.453 92.4867 593.479 91.46C594.599 90.4333 595.159 89.1733 595.159 87.68V58.14C595.159 56.6467 594.599 55.3867 593.479 54.36C592.453 53.24 591.193 52.68 589.699 52.68H522.499C521.006 52.68 519.699 53.24 518.579 54.36C517.553 55.3867 517.039 56.6467 517.039 58.14V87.68C517.039 89.1733 517.553 90.4333 518.579 91.46C519.699 92.4867 521.006 93 522.499 93ZM622.627 142V41.2H634.107V142H622.627ZM667.688 142C664.608 142 661.761 141.253 659.148 139.76C656.628 138.267 654.621 136.26 653.128 133.74C651.635 131.127 650.888 128.28 650.888 125.2V58C650.888 54.92 651.635 52.12 653.128 49.6C654.621 46.9867 656.628 44.9333 659.148 43.44C661.761 41.9467 664.608 41.2 667.688 41.2H734.888C737.968 41.2 740.768 41.9467 743.288 43.44C745.901 44.9333 747.955 46.9867 749.448 49.6C750.941 52.12 751.688 54.92 751.688 58V125.2C751.688 128.28 750.941 131.127 749.448 133.74C747.955 136.26 745.901 138.267 743.288 139.76C740.768 141.253 737.968 142 734.888 142H667.688ZM667.688 130.66H734.888C736.381 130.66 737.641 130.147 738.668 129.12C739.788 128 740.348 126.693 740.348 125.2V58C740.348 56.5067 739.788 55.2467 738.668 54.22C737.641 53.1 736.381 52.54 734.888 52.54H667.688C666.195 52.54 664.888 53.1 663.768 54.22C662.741 55.2467 662.228 56.5067 662.228 58V125.2C662.228 126.693 662.741 128 663.768 129.12C664.888 130.147 666.195 130.66 667.688 130.66ZM767.106 142V41.2H782.646L856.566 129.12V41.2H867.906V142H852.366L778.446 54.08V142H767.106Z" fill="white"/><defs><clipPath id="clip0_2101_18"><rect width="158" height="158" fill="white" transform="translate(0 9)"/></clipPath></defs></svg>
-  <svg class="small-logo" width="336" height="72" viewBox="0 0 336 72" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_101_131" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="5" width="63" height="63"><g clip-path="url(#clip0_101_131)"><path d="M31.0672 5.47153L57.9722 21.0051V52.0723L31.0672 67.6059L4.16222 52.0723V21.0051L31.0672 5.47153Z" fill="#BD3455"/></g></mask><g mask="url(#mask0_101_131)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.83137 1.539H5.1123V47.6365L9.83137 42.6397V1.539ZM9.83137 46.0762L5.1123 51.0729V80.1902H9.83137V46.0762ZM14.5504 41.0794L19.2695 36.0827V80.1902H14.5504V41.0794ZM19.2695 32.6462L14.5504 37.643V1.539H19.2695V32.6462ZM23.9886 38.2063V80.1902H28.7077V42.9243L23.9886 38.2063ZM28.7077 39.5878L23.9886 34.8697V1.539H28.7077V39.5878ZM33.4267 45.7569V80.1902H38.1458V41.9072L33.4267 45.7569ZM38.1458 38.8621L33.4267 42.7118V1.539H38.1458V38.8621ZM42.8649 38.0574V80.1902H47.5839V34.2077L42.8649 38.0574ZM47.5839 31.1626L42.8649 35.0124V1.539H47.5839V31.1626ZM52.303 30.358V80.1902H57.0221V26.5082L52.303 30.358ZM57.0221 23.4632L52.303 27.3129V1.539H57.0221V23.4632Z" fill="white"/></g><path d="M65.175 55V19H70.725L97.125 50.4V19H101.175V55H95.625L69.225 23.6V55H65.175ZM106.877 55V19H139.727V23.05H110.927V34.95H134.077V39.05H110.927V50.95H139.727V55H106.877ZM150.958 55C149.858 55 148.841 54.7333 147.908 54.2C147.008 53.6667 146.291 52.95 145.758 52.05C145.224 51.1167 144.958 50.1 144.958 49V19H149.008V49C149.008 49.5333 149.191 50 149.558 50.4C149.958 50.7667 150.424 50.95 150.958 50.95H174.958C175.491 50.95 175.941 50.7667 176.308 50.4C176.708 50 176.908 49.5333 176.908 49V19H180.958V49C180.958 50.1 180.691 51.1167 180.158 52.05C179.624 52.95 178.891 53.6667 177.958 54.2C177.058 54.7333 176.058 55 174.958 55H150.958ZM216.864 55L205.114 41H210.414L222.214 54.95V55H216.864ZM186.464 55V19.05H216.464C217.564 19.05 218.564 19.3333 219.464 19.9C220.397 20.4333 221.131 21.15 221.664 22.05C222.197 22.95 222.464 23.95 222.464 25.05V35.6C222.464 36.7 222.197 37.7 221.664 38.6C221.131 39.5 220.397 40.2333 219.464 40.8C218.564 41.3333 217.564 41.6 216.464 41.6H190.514V55H186.464ZM192.464 37.5H216.464C216.997 37.5 217.447 37.3167 217.814 36.95C218.214 36.5833 218.414 36.1333 218.414 35.6V25.05C218.414 24.5167 218.214 24.0667 217.814 23.7C217.447 23.3 216.997 23.1 216.464 23.1H192.464C191.931 23.1 191.464 23.3 191.064 23.7C190.697 24.0667 190.514 24.5167 190.514 25.05V35.6C190.514 36.1333 190.697 36.5833 191.064 36.95C191.464 37.3167 191.931 37.5 192.464 37.5ZM228.224 55V19H232.324V55H228.224ZM244.317 55C243.217 55 242.201 54.7333 241.267 54.2C240.367 53.6667 239.651 52.95 239.117 52.05C238.584 51.1167 238.317 50.1 238.317 49V25C238.317 23.9 238.584 22.9 239.117 22C239.651 21.0667 240.367 20.3333 241.267 19.8C242.201 19.2667 243.217 19 244.317 19H268.317C269.417 19 270.417 19.2667 271.317 19.8C272.251 20.3333 272.984 21.0667 273.517 22C274.051 22.9 274.317 23.9 274.317 25V49C274.317 50.1 274.051 51.1167 273.517 52.05C272.984 52.95 272.251 53.6667 271.317 54.2C270.417 54.7333 269.417 55 268.317 55H244.317ZM244.317 50.95H268.317C268.851 50.95 269.301 50.7667 269.667 50.4C270.067 50 270.267 49.5333 270.267 49V25C270.267 24.4667 270.067 24.0167 269.667 23.65C269.301 23.25 268.851 23.05 268.317 23.05H244.317C243.784 23.05 243.317 23.25 242.917 23.65C242.551 24.0167 242.367 24.4667 242.367 25V49C242.367 49.5333 242.551 50 242.917 50.4C243.317 50.7667 243.784 50.95 244.317 50.95ZM279.823 55V19H285.373L311.773 50.4V19H315.823V55H310.273L283.873 23.6V55H279.823Z" fill="white"/><defs><clipPath id="clip0_101_131"><rect width="62.1344" height="62.1344" fill="white" transform="translate(0 5.47153)"/></clipPath></defs></svg>
-  <p class="description">Neurion is a next-generation quantitative hedge fund that harnesses artificial intelligence and advanced machine learning to identify unique investment opportunities in global markets. Our proprietary AI systems continuously evolve and adapt, processing vast amounts of data to generate superior risk-adjusted returns.</p>
-  <a class="contact" href="#" id="contactLink">contact</a>
-</div>
+
+<header class="site-header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Neurion — home">
+      <svg viewBox="-1 18 305 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g transform="translate(0 19)"><rect x="1.62" y="1.62" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="1.62" y="8.82" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="1.62" y="16.02" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="1.62" y="23.22" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="1.62" y="30.42" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="8.82" y="1.62" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="8.82" y="8.82" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="8.82" y="16.02" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="8.82" y="23.22" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="8.82" y="30.42" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="16.02" y="1.62" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="16.02" y="8.82" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="16.02" y="16.02" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="16.02" y="23.22" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="16.02" y="30.42" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="23.22" y="1.62" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="23.22" y="8.82" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="23.22" y="16.02" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="23.22" y="23.22" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="23.22" y="30.42" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="30.42" y="1.62" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="30.42" y="8.82" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="30.42" y="16.02" width="3.96" height="3.96" rx="0.87" fill="currentColor"/><rect x="30.42" y="23.22" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/><rect x="30.42" y="30.42" width="3.96" height="3.96" rx="0.87" fill="currentColor" opacity="0.22"/></g><path transform="translate(-13.175 0)" d="M65.175 55V19H70.725L97.125 50.4V19H101.175V55H95.625L69.225 23.6V55H65.175ZM106.877 55V19H139.727V23.05H110.927V34.95H134.077V39.05H110.927V50.95H139.727V55H106.877ZM150.958 55C149.858 55 148.841 54.7333 147.908 54.2C147.008 53.6667 146.291 52.95 145.758 52.05C145.224 51.1167 144.958 50.1 144.958 49V19H149.008V49C149.008 49.5333 149.191 50 149.558 50.4C149.958 50.7667 150.424 50.95 150.958 50.95H174.958C175.491 50.95 175.941 50.7667 176.308 50.4C176.708 50 176.908 49.5333 176.908 49V19H180.958V49C180.958 50.1 180.691 51.1167 180.158 52.05C179.624 52.95 178.891 53.6667 177.958 54.2C177.058 54.7333 176.058 55 174.958 55H150.958ZM216.864 55L205.114 41H210.414L222.214 54.95V55H216.864ZM186.464 55V19.05H216.464C217.564 19.05 218.564 19.3333 219.464 19.9C220.397 20.4333 221.131 21.15 221.664 22.05C222.197 22.95 222.464 23.95 222.464 25.05V35.6C222.464 36.7 222.197 37.7 221.664 38.6C221.131 39.5 220.397 40.2333 219.464 40.8C218.564 41.3333 217.564 41.6 216.464 41.6H190.514V55H186.464ZM192.464 37.5H216.464C216.997 37.5 217.447 37.3167 217.814 36.95C218.214 36.5833 218.414 36.1333 218.414 35.6V25.05C218.414 24.5167 218.214 24.0667 217.814 23.7C217.447 23.3 216.997 23.1 216.464 23.1H192.464C191.931 23.1 191.464 23.3 191.064 23.7C190.697 24.0667 190.514 24.5167 190.514 25.05V35.6C190.514 36.1333 190.697 36.5833 191.064 36.95C191.464 37.3167 191.931 37.5 192.464 37.5ZM228.224 55V19H232.324V55H228.224ZM244.317 55C243.217 55 242.201 54.7333 241.267 54.2C240.367 53.6667 239.651 52.95 239.117 52.05C238.584 51.1167 238.317 50.1 238.317 49V25C238.317 23.9 238.584 22.9 239.117 22C239.651 21.0667 240.367 20.3333 241.267 19.8C242.201 19.2667 243.217 19 244.317 19H268.317C269.417 19 270.417 19.2667 271.317 19.8C272.251 20.3333 272.984 21.0667 273.517 22C274.051 22.9 274.317 23.9 274.317 25V49C274.317 50.1 274.051 51.1167 273.517 52.05C272.984 52.95 272.251 53.6667 271.317 54.2C270.417 54.7333 269.417 55 268.317 55H244.317ZM244.317 50.95H268.317C268.851 50.95 269.301 50.7667 269.667 50.4C270.067 50 270.267 49.5333 270.267 49V25C270.267 24.4667 270.067 24.0167 269.667 23.65C269.301 23.25 268.851 23.05 268.317 23.05H244.317C243.784 23.05 243.317 23.25 242.917 23.65C242.551 24.0167 242.367 24.4667 242.367 25V49C242.367 49.5333 242.551 50 242.917 50.4C243.317 50.7667 243.784 50.95 244.317 50.95ZM279.823 55V19H285.373L311.773 50.4V19H315.823V55H310.273L283.873 23.6V55H279.823Z" fill="currentColor"/></svg>
+    </a>
+    <nav class="nav mono" aria-label="Primary">
+      <a class="hide-sm" href="#approach">Approach</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Introduction">
+    <canvas id="spiral" aria-hidden="true"></canvas>
+    <div class="hero-shade"></div>
+    <div class="wrap">
+      <h1 class="reveal" style="--d:0s">Finding order <span class="dim">in the noise of global markets.</span></h1>
+      <p class="lede reveal" style="--d:.08s">Neurion is a next-generation quantitative hedge fund applying artificial intelligence and machine learning to global markets.</p>
+      <div class="actions reveal" style="--d:.16s">
+        <a class="btn" href="#contact">Get in touch <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="approach" aria-labelledby="approach-title">
+    <div class="wrap grid">
+      <p class="label mono reveal"><span class="n">01</span><span id="approach-title">Approach</span></p>
+      <div class="body">
+        <p class="statement reveal">Our proprietary AI systems continuously learn and adapt to changing markets, <span class="dim">in pursuit of superior risk-adjusted returns.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap grid">
+      <p class="label mono reveal"><span class="n">02</span><span id="contact-title">Contact</span></p>
+      <div class="body">
+        <p class="contact-lead reveal">For all enquiries, write to us.</p>
+        <a class="email reveal" style="--d:.1s" href="#" id="email"><span id="email-text">Email us</span><span class="arr" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap grid">
+    <p class="copy">© <span id="year">2026</span> Neurion</p>
+    <p class="legal">This website is for information purposes only. Nothing on it constitutes an offer to sell, or a solicitation of an offer to buy, any security, fund interest or investment product.</p>
+    <a class="top mono" href="#top">Back to top ↑</a>
+  </div>
+</footer>
 
 <script>
 // ─────────────────────────────────────────────
-// Binary Streams Animation
+// Page chrome: email, header, reveals
 // ─────────────────────────────────────────────
-(function() {
-  const canvas = document.getElementById('flow');
-  const ctx = canvas.getContext('2d');
-  const content = document.getElementById('content');
-  const contactLink = document.getElementById('contactLink');
+(function () {
+  var addr = atob('Y29udGFjdEBuZXVyaW9uLmFp');
+  var email = document.getElementById('email');
+  document.getElementById('email-text').textContent = addr;
+  email.href = 'mailto:' + addr;
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  contactLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.href = atob('bWFpbHRvOmNvbnRhY3RAbmV1cmlvbi5haQ==');
+  var header = document.getElementById('header');
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 12); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Hero elements animate in on load; the rest as they scroll into view
+  document.querySelectorAll('.hero .reveal').forEach(function (e) {
+    requestAnimationFrame(function () { e.classList.add('in'); });
   });
+  var els = document.querySelectorAll('main > section:not(.hero) .reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  els.forEach(function (e) { io.observe(e); });
+})();
 
-  let W, H, dpr;
-  let mouse = { x: -9999, y: -9999 };
-  let smoothMouse = { x: -9999, y: -9999 };
+// ─────────────────────────────────────────────
+// Ulam spiral — primes on a square spiral.
+// Diagonal "traces" sweep along prime-rich lines;
+// the cursor acts as a lens that reads out n.
+// ─────────────────────────────────────────────
+(function () {
+  var hero = document.querySelector('.hero');
+  var canvas = document.getElementById('spiral');
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ─────────────────────────────────────────────
-  // Binary character set
-  // ─────────────────────────────────────────────
-  const CHARS = '0011001101ABCDEF';
-  const MOUSE_RADIUS = 150;
+  var AR = 106, AG = 209, AB = 240;           // accent
+  var INK = '238,241,245';
+  var REVEAL_MS = 700;
 
-  // Aurora-matched color palette
-  const ROW_COLORS = [
-    { r: 15, g: 60, b: 120 },   // deep blue
-    { r: 10, g: 90, b: 110 },   // teal
-    { r: 20, g: 130, b: 160 },  // cyan
-    { r: 8, g: 70, b: 90 },     // deep teal
-    { r: 20, g: 100, b: 80 }    // green-teal
-  ];
+  var W, H, dpr, cell, half, side, cx, cy, N, reach;
+  var isPrime, posX, posY, nAt;               // lookups
+  var pIdx, pX, pY, pA, pCount;               // primes in view
+  var base, primesLayer;                      // offscreen layers
+  var diagonals = [], traces = [];
+  var t0 = 0, revealed = false, running = true, lastSpawn = 0, nextSpawn = 300, lastDiag = -1;
+  var mouse = { x: -1e4, y: -1e4, sx: -1e4, sy: -1e4, inside: false };
 
-  function randomChar() {
-    return CHARS[Math.floor(Math.random() * CHARS.length)];
+  function smooth(a, b, x) { x = Math.min(1, Math.max(0, (x - a) / (b - a))); return x * x * (3 - 2 * x); }
+
+  function layer() {
+    var c = document.createElement('canvas');
+    c.width = canvas.width; c.height = canvas.height;
+    var g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return c;
   }
 
-  // ─────────────────────────────────────────────
-  // Stream Rows
-  // ─────────────────────────────────────────────
-  let rows = [];
-  let highlights = [];
-
-  class StreamRow {
-    constructor(y, index, totalRows) {
-      this.y = y;
-      // Depth: 0 = background, 1 = foreground
-      this.depth = Math.random();
-      this.speed = 0.3 + Math.random() * 1.2;
-      this.baseOpacity = 0.12 + Math.random() * 0.15;
-      this.fontSize = 9 + this.depth * 3; // 9-12px range based on depth
-      this.baseOpacity *= (0.6 + this.depth * 0.4);
-      this.charWidth = this.fontSize * 0.62;
-      this.offset = 0;
-      this.chars = [];
-      this.totalWidth = 0;
-      // Assign color from aurora palette
-      const color = ROW_COLORS[Math.floor(Math.random() * ROW_COLORS.length)];
-      this.r = color.r;
-      this.g = color.g;
-      this.b = color.b;
-      this.generateChars();
-    }
-
-    generateChars() {
-      // Generate enough characters to fill the screen plus a buffer
-      const needed = Math.ceil((W + 200) / this.charWidth) + 20;
-      this.chars = [];
-      for (let i = 0; i < needed; i++) {
-        this.chars.push(randomChar());
-      }
-      this.totalWidth = this.chars.length * this.charWidth;
-    }
-
-    update() {
-      this.offset += this.speed;
-      // When scrolled past one character width, shift and add new char
-      if (this.offset >= this.charWidth) {
-        const shifts = Math.floor(this.offset / this.charWidth);
-        for (let s = 0; s < shifts; s++) {
-          this.chars.shift();
-          this.chars.push(randomChar());
-        }
-        this.offset -= shifts * this.charWidth;
-      }
-    }
-  }
-
-  // ─────────────────────────────────────────────
-  // Pattern Highlights
-  // ─────────────────────────────────────────────
-  class Highlight {
-    constructor(rowIndex, charStart, length) {
-      this.rowIndex = rowIndex;
-      this.charStart = charStart;
-      this.length = length;
-      this.birth = 0;
-      this.delay = 0;
-      this.duration = 4500;
-      this.alive = true;
-      this.progress = 0;
-    }
-
-    update(elapsed) {
-      if (!this.birth) this.birth = elapsed;
-      const effective = elapsed - this.birth - this.delay;
-      if (effective < 0) { this.progress = 0; return; }
-      this.progress = effective / this.duration;
-      if (this.progress >= 1) this.alive = false;
-    }
-  }
-
-  // ─────────────────────────────────────────────
-  // Timing for events
-  // ─────────────────────────────────────────────
-  let lastHighlightTime = 0;
-  let nextHighlightInterval = 0;
-
-  // ─────────────────────────────────────────────
-  // Setup
-  // ─────────────────────────────────────────────
-  function initRows() {
-    rows = [];
-    const rowCount = 15 + Math.floor(Math.random() * 11); // 15-25 rows
-    const spacing = H / (rowCount + 1);
-    for (let i = 0; i < rowCount; i++) {
-      const y = spacing * (i + 1) + (Math.random() - 0.5) * (spacing * 0.3);
-      rows.push(new StreamRow(y, i, rowCount));
-    }
-    // Sort by depth so background rows draw first
-    rows.sort(function(a, b) { return a.depth - b.depth; });
-  }
-
-  function resize() {
+  function build() {
+    var r = hero.getBoundingClientRect();
+    W = r.width; H = r.height;
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = window.innerWidth;
-    H = window.innerHeight;
-    canvas.width = W * dpr;
-    canvas.height = H * dpr;
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    if (rows.length === 0) {
-      initRows();
-    } else {
-      // Regenerate chars for new width
-      for (let i = 0; i < rows.length; i++) {
-        rows[i].generateChars();
+
+    var mobile = W < 760;
+    cell = mobile ? 6 : (W > 1700 ? 8 : 7);
+    cx = Math.round(mobile ? W * 0.5 : W * (W < 1100 ? 0.74 : 0.68));
+    cy = Math.round(mobile ? H * 0.22 : H * 0.5);
+    reach = Math.max(cx, W - cx, cy, H - cy);
+    half = Math.ceil(reach / cell) + 1;
+    side = half * 2 + 1;
+    N = side * side;
+
+    // Sieve of Eratosthenes
+    isPrime = new Uint8Array(N + 1).fill(1);
+    isPrime[0] = isPrime[1] = 0;
+    for (var i = 2; i * i <= N; i++) if (isPrime[i]) for (var j = i * i; j <= N; j += i) isPrime[j] = 0;
+
+    // Walk the spiral: right, up, left, down with run lengths 1,1,2,2,3,3…
+    posX = new Int16Array(N + 1); posY = new Int16Array(N + 1); nAt = new Int32Array(side * side);
+    var x = 0, y = 0, n = 1, step = 1, dir = 0, DX = [1, 0, -1, 0], DY = [0, -1, 0, 1];
+    posX[1] = 0; posY[1] = 0; nAt[half * side + half] = 1;
+    outer: while (true) {
+      for (var rep = 0; rep < 2; rep++) {
+        for (var s = 0; s < step; s++) {
+          if (n >= N) break outer;
+          x += DX[dir]; y += DY[dir]; n++;
+          posX[n] = x; posY[n] = y; nAt[(y + half) * side + (x + half)] = n;
+        }
+        dir = (dir + 1) & 3;
+      }
+      step++;
+    }
+
+    // Collect visible primes in spiral order with a radial falloff
+    pIdx = []; pX = []; pY = []; pA = [];
+    var R = reach * (mobile ? 1.05 : 0.95);
+    for (n = 2; n <= N; n++) {
+      if (!isPrime[n]) continue;
+      var px = cx + posX[n] * cell, py = cy + posY[n] * cell;
+      if (px < -cell || px > W + cell || py < -cell || py > H + cell) continue;
+      var d = Math.hypot(px - cx, py - cy) / R;
+      pIdx.push(n); pX.push(px); pY.push(py);
+      pA.push(0.12 + 0.74 * (1 - smooth(0.05, 1.0, d)));
+    }
+    pCount = pIdx.length;
+
+    // Static base: faint lattice of every integer
+    base = layer();
+    var g = base.getContext('2d');
+    for (var yy = -half; yy <= half; yy++) {
+      var py2 = cy + yy * cell; if (py2 < -cell || py2 > H + cell) continue;
+      for (var xx = -half; xx <= half; xx++) {
+        var px2 = cx + xx * cell; if (px2 < -cell || px2 > W + cell) continue;
+        var a = 0.075 * (1 - smooth(0.0, 0.9, Math.hypot(px2 - cx, py2 - cy) / R));
+        if (a < 0.006) continue;
+        g.fillStyle = 'rgba(' + INK + ',' + a.toFixed(3) + ')';
+        g.fillRect(px2 - 0.5, py2 - 0.5, 1, 1);
+      }
+    }
+
+    // Fully revealed primes, pre-rendered
+    primesLayer = layer();
+    drawPrimes(primesLayer.getContext('2d'), pCount, 0);
+
+    findDiagonals(mobile);
+    traces = [];
+  }
+
+  function drawPrimes(g, count, flash) {
+    var size = cell > 6 ? 2 : 1.8, h = size / 2;
+    for (var k = 0; k < count; k++) {
+      var a = pA[k];
+      if (flash && k > count - flash) {
+        var f = (k - (count - flash)) / flash;
+        g.fillStyle = 'rgba(' + AR + ',' + AG + ',' + AB + ',' + Math.min(1, a + f * 0.6).toFixed(3) + ')';
+      } else {
+        g.fillStyle = 'rgba(' + INK + ',' + a.toFixed(3) + ')';
+      }
+      g.fillRect(pX[k] - h, pY[k] - h, size, size);
+    }
+  }
+
+  // Find prime-dense diagonal chords near the spiral's centre
+  function findDiagonals(mobile) {
+    diagonals = [];
+    var rad = Math.floor(Math.min(mobile ? W * 0.46 : H * 0.44, mobile ? H * 0.28 : W * 0.3) / cell);
+    for (var o = 0; o < 2; o++) {               // 0: x - y = c, 1: x + y = c
+      for (var c = -rad; c <= rad; c++) {
+        var cells = [], primes = 0;
+        for (var t = -rad; t <= rad; t++) {
+          var x = o === 0 ? t + Math.ceil(c / 2) : t + Math.ceil(c / 2);
+          var y = o === 0 ? x - c : c - x;
+          if (x * x + y * y > rad * rad) continue;
+          if (!mobile && (cx + x * cell < W * 0.56 || cy + y * cell > H - 170)) continue;   // keep clear of the headline
+          var n = nAt[(y + half) * side + (x + half)];
+          var p = isPrime[n] === 1;
+          if (p) primes++;
+          cells.push({ x: cx + x * cell, y: cy + y * cell, p: p, n: n });
+        }
+        if (cells.length < 22) continue;
+        diagonals.push({ cells: cells, score: primes / cells.length });
+      }
+    }
+    diagonals.sort(function (a, b) { return b.score - a.score; });
+    diagonals = diagonals.slice(0, 18);
+  }
+
+  function spawnTrace(now) {
+    if (!diagonals.length) return;
+    var i; do { i = Math.floor(Math.random() * diagonals.length); } while (i === lastDiag && diagonals.length > 1);
+    lastDiag = i;
+    var cells = diagonals[i].cells.slice();
+    if (Math.random() < 0.5) cells.reverse();
+    traces.push({ cells: cells, start: now, speed: 0.024 + Math.random() * 0.01 }); // cells per ms
+  }
+
+  function drawTraces(now) {
+    var TRAIL = 26;
+    for (var t = traces.length - 1; t >= 0; t--) {
+      var tr = traces[t], cells = tr.cells, head = (now - tr.start) * tr.speed;
+      if (head > cells.length + TRAIL) { traces.splice(t, 1); continue; }
+      var hi = Math.min(cells.length - 1, Math.floor(head));
+      var tail = Math.max(0, Math.floor(head - TRAIL));
+      // faint guide line
+      if (hi > tail) {
+        var a0 = cells[tail], a1 = cells[hi];
+        var lg = ctx.createLinearGradient(a0.x, a0.y, a1.x, a1.y);
+        var la = head > cells.length ? 0.22 * (1 - (head - cells.length) / TRAIL) : 0.22;
+        lg.addColorStop(0, 'rgba(' + AR + ',' + AG + ',' + AB + ',0)');
+        lg.addColorStop(1, 'rgba(' + AR + ',' + AG + ',' + AB + ',' + la.toFixed(3) + ')');
+        ctx.strokeStyle = lg; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(a0.x, a0.y); ctx.lineTo(a1.x, a1.y); ctx.stroke();
+      }
+      // lit primes along the trail
+      for (var k = tail; k <= hi; k++) {
+        var c = cells[k]; if (!c.p) continue;
+        var f = Math.exp(-(head - k) / 9);
+        ctx.fillStyle = 'rgba(' + AR + ',' + AG + ',' + AB + ',' + (0.25 + 0.75 * f).toFixed(3) + ')';
+        var s = 2 + 1.6 * f; ctx.fillRect(c.x - s / 2, c.y - s / 2, s, s);
+      }
+      // glowing head
+      if (head < cells.length) {
+        var hc = cells[hi];
+        var gr = ctx.createRadialGradient(hc.x, hc.y, 0, hc.x, hc.y, 22);
+        gr.addColorStop(0, 'rgba(' + AR + ',' + AG + ',' + AB + ',.35)');
+        gr.addColorStop(1, 'rgba(' + AR + ',' + AG + ',' + AB + ',0)');
+        ctx.fillStyle = gr; ctx.fillRect(hc.x - 22, hc.y - 22, 44, 44);
       }
     }
   }
 
-  window.addEventListener('resize', resize);
-
-  document.addEventListener('mousemove', function(e) {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  document.addEventListener('mouseleave', function() {
-    mouse.x = -9999;
-    mouse.y = -9999;
-  });
-
-  document.addEventListener('touchmove', function(e) {
-    if (e.touches.length > 0) {
-      mouse.x = e.touches[0].clientX;
-      mouse.y = e.touches[0].clientY;
-    }
-  }, { passive: true });
-
-  document.addEventListener('touchend', function() {
-    mouse.x = -9999;
-    mouse.y = -9999;
-  });
-
-  // ─────────────────────────────────────────────
-  // Vignette
-  // ─────────────────────────────────────────────
-  function drawVignette() {
-    const maxDim = Math.max(W, H);
-    const grd = ctx.createRadialGradient(W / 2, H / 2, maxDim * 0.2, W / 2, H / 2, maxDim * 0.75);
-    grd.addColorStop(0, 'rgba(6,13,24,0)');
-    grd.addColorStop(0.5, 'rgba(6,13,24,0)');
-    grd.addColorStop(0.8, 'rgba(6,13,24,0.4)');
-    grd.addColorStop(1, 'rgba(6,13,24,0.85)');
-    ctx.fillStyle = grd;
-    ctx.fillRect(0, 0, W, H);
-  }
-
-  // ─────────────────────────────────────────────
-  // Animation loop
-  // ─────────────────────────────────────────────
-  let startTime = 0;
-  let fadeStarted = false;
-
-  function animate(timestamp) {
-    if (!startTime) {
-      startTime = timestamp;
-    }
-    const elapsed = timestamp - startTime;
-
-    // Smooth mouse tracking — snap on first entry, then lerp
-    if (mouse.x > -9000 && smoothMouse.x < -9000) {
-      smoothMouse.x = mouse.x;
-      smoothMouse.y = mouse.y;
-    } else {
-      smoothMouse.x += (mouse.x - smoothMouse.x) * 0.08;
-      smoothMouse.y += (mouse.y - smoothMouse.y) * 0.08;
-    }
-
-    // Global fade-in over 3 seconds
-    const globalAlpha = Math.min(1, elapsed / 3000);
-
-    // Content fade-in at 0.5s
-    if (!fadeStarted && elapsed > 500) {
-      content.classList.add('visible');
-      fadeStarted = true;
-    }
-
-    // Clear
-    ctx.fillStyle = '#060d18';
-    ctx.fillRect(0, 0, W, H);
-
-    // Subtle center glow for depth
-    const cGrd = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, Math.max(W, H) * 0.5);
-    cGrd.addColorStop(0, 'rgba(10,25,50,0.15)');
-    cGrd.addColorStop(0.6, 'rgba(8,18,38,0.06)');
-    cGrd.addColorStop(1, 'rgba(6,13,24,0)');
-    ctx.fillStyle = cGrd;
-    ctx.fillRect(0, 0, W, H);
-
-    // ─── Spawn highlights — burst of 6-8 across different rows ───
-    if (elapsed - lastHighlightTime > nextHighlightInterval) {
-      const count = 10 + Math.floor(Math.random() * 11);
-      const used = {};
-      for (let b = 0; b < count; b++) {
-        let ri = Math.floor(Math.random() * rows.length);
-        let tries = 0;
-        while (used[ri] && tries < 6) { ri = Math.floor(Math.random() * rows.length); tries++; }
-        used[ri] = true;
-        const row = rows[ri];
-        const hlLength = 12 + Math.floor(Math.random() * 20);
-        const charStart = Math.floor(Math.random() * Math.max(1, row.chars.length - hlLength));
-        const hl = new Highlight(ri, charStart, hlLength);
-        hl.delay = b * (200 + Math.random() * 300);
-        highlights.push(hl);
-      }
-      lastHighlightTime = elapsed;
-      nextHighlightInterval = 2500 + Math.random() * 3500;
-    }
-
-    // ─── Update highlights ───
-    for (let i = highlights.length - 1; i >= 0; i--) {
-      highlights[i].update(elapsed);
-      if (!highlights[i].alive) {
-        highlights.splice(i, 1);
+  function drawLens() {
+    if (!mouse.inside && mouse.sx < -1e3) return;
+    var R = 96, mx = mouse.sx, my = mouse.sy;
+    var gi0 = Math.floor((mx - R - cx) / cell), gi1 = Math.ceil((mx + R - cx) / cell);
+    var gj0 = Math.floor((my - R - cy) / cell), gj1 = Math.ceil((my + R - cy) / cell);
+    for (var j = gj0; j <= gj1; j++) {
+      if (j < -half || j > half) continue;
+      for (var i = gi0; i <= gi1; i++) {
+        if (i < -half || i > half) continue;
+        var n = nAt[(j + half) * side + (i + half)];
+        if (!isPrime[n]) continue;
+        var px = cx + i * cell, py = cy + j * cell;
+        var d = Math.hypot(px - mx, py - my) / R; if (d >= 1) continue;
+        var f = 1 - d * d;
+        ctx.fillStyle = 'rgba(' + AR + ',' + AG + ',' + AB + ',' + (0.85 * f).toFixed(3) + ')';
+        var s = 2 + 1.8 * f; ctx.fillRect(px - s / 2, py - s / 2, s, s);
       }
     }
-
-    // ─── Update and draw rows ───
+    if (!mouse.inside) return;
+    // Read-out for the integer under the cursor
+    var ci = Math.round((mx - cx) / cell), cj = Math.round((my - cy) / cell);
+    if (ci < -half || ci > half || cj < -half || cj > half) return;
+    var cn = nAt[(cj + half) * side + (ci + half)], prime = isPrime[cn] === 1;
+    var qx = cx + ci * cell, qy = cy + cj * cell, b = cell / 2 + 3;
+    ctx.strokeStyle = prime ? 'rgba(' + AR + ',' + AG + ',' + AB + ',.9)' : 'rgba(' + INK + ',.45)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(Math.round(qx - b) + 0.5, Math.round(qy - b) + 0.5, b * 2, b * 2);
+    ctx.font = '500 11px "Geist Mono", ui-monospace, monospace';
     ctx.textBaseline = 'middle';
-
-    for (let r = 0; r < rows.length; r++) {
-      const row = rows[r];
-
-      row.offset += row.speed;
-      if (row.offset >= row.charWidth) {
-        const shifts = Math.floor(row.offset / row.charWidth);
-        for (let s = 0; s < shifts; s++) {
-          row.chars.shift();
-          row.chars.push(randomChar());
-        }
-        row.offset -= shifts * row.charWidth;
-      }
-
-      ctx.font = '300 ' + row.fontSize + 'px "Inter", monospace';
-
-      // Build highlight map for this row
-      const hlMap = {};
-      for (let h = 0; h < highlights.length; h++) {
-        const hl = highlights[h];
-        if (hl.rowIndex === r) {
-          // Bell curve: peak at 0.15, fade out smoothly
-          const p = hl.progress;
-          const intensity = p < 0.15 ? p / 0.15 : Math.max(0, 1 - (p - 0.15) / 0.85);
-          for (let c = hl.charStart; c < hl.charStart + hl.length; c++) {
-            if (c >= 0 && c < row.chars.length) {
-              // Soft edges on highlight segment
-              const edgeDist = Math.min(c - hl.charStart, hl.charStart + hl.length - 1 - c);
-              const edgeFade = Math.min(1, edgeDist / 2);
-              const val = intensity * edgeFade;
-              if (!hlMap[c] || hlMap[c] < val) hlMap[c] = val;
-            }
-          }
-        }
-      }
-
-      // Draw each character
-      for (let i = 0; i < row.chars.length; i++) {
-        const x = i * row.charWidth - row.offset;
-        if (x < -row.charWidth || x > W + row.charWidth) continue;
-
-        let alpha = row.baseOpacity;
-        let r2 = row.r, g2 = row.g, b2 = row.b;
-
-        // Highlight glow (cyan)
-        if (hlMap[i]) {
-          const f = hlMap[i];
-          r2 = Math.round(r2 + (40 - r2) * f * 0.8);
-          g2 = Math.round(g2 + (190 - g2) * f * 0.8);
-          b2 = Math.round(b2 + (220 - b2) * f * 0.8);
-          alpha += f * 0.35;
-        }
-
-        alpha = Math.min(alpha, 0.9) * globalAlpha;
-
-        ctx.fillStyle = 'rgba(' + r2 + ',' + g2 + ',' + b2 + ',' + alpha.toFixed(4) + ')';
-        ctx.fillText(row.chars[i], x, row.y);
-      }
-
-      // Subtle glow behind highlighted segments
-      for (let h = 0; h < highlights.length; h++) {
-        const hl = highlights[h];
-        if (hl.rowIndex !== r) continue;
-        const p = hl.progress;
-        const intensity = p < 0.15 ? p / 0.15 : Math.max(0, 1 - (p - 0.15) / 0.85);
-        if (intensity < 0.01) continue;
-        const x1 = hl.charStart * row.charWidth - row.offset;
-        const x2 = (hl.charStart + hl.length) * row.charWidth - row.offset;
-        const cx = (x1 + x2) / 2;
-        const hw = (x2 - x1) / 2 + 20;
-        const glowGrad = ctx.createRadialGradient(cx, row.y, 0, cx, row.y, hw);
-        const ga = (intensity * 0.07 * globalAlpha).toFixed(4);
-        glowGrad.addColorStop(0, 'rgba(60,180,220,' + ga + ')');
-        glowGrad.addColorStop(1, 'rgba(60,180,220,0)');
-        ctx.fillStyle = glowGrad;
-        ctx.fillRect(cx - hw, row.y - 12, hw * 2, 24);
-      }
+    var label = 'n = ' + cn.toLocaleString('en-US');
+    var lx = qx + b + 10, ly = qy - b - 8;
+    ctx.fillStyle = 'rgba(' + INK + ',.85)'; ctx.fillText(label, lx, ly);
+    if (prime) {
+      var w = ctx.measureText(label + '  ').width;
+      ctx.fillStyle = 'rgba(' + AR + ',' + AG + ',' + AB + ',.95)'; ctx.fillText('PRIME', lx + w, ly);
     }
-
-    // Vignette overlay
-    ctx.globalAlpha = 1;
-    drawVignette();
-
-    requestAnimationFrame(animate);
   }
 
-  resize();
-  requestAnimationFrame(animate);
+  function frame(now) {
+    if (!running) return;
+    if (!t0) t0 = now;
+    var t = now - t0;
+
+    mouse.sx += (mouse.x - mouse.sx) * 0.18;
+    mouse.sy += (mouse.y - mouse.sy) * 0.18;
+    if (mouse.sx < -1e3 && mouse.x > -1e3) { mouse.sx = mouse.x; mouse.sy = mouse.y; }
+
+    ctx.clearRect(0, 0, W, H);
+    var p = Math.min(1, t / REVEAL_MS);
+    ctx.globalAlpha = Math.min(1, t / 250);
+    ctx.drawImage(base, 0, 0, W, H);
+    ctx.globalAlpha = 1;
+
+    if (!revealed) {
+      var e = 1 - Math.pow(1 - p, 3);
+      var count = Math.floor(pCount * e);
+      drawPrimes(ctx, count, Math.max(40, Math.floor(count * 0.04)));
+      if (p >= 1) { revealed = true; lastSpawn = t; }
+    } else {
+      ctx.drawImage(primesLayer, 0, 0, W, H);
+      if (t - lastSpawn > nextSpawn && traces.length < 3) {
+        spawnTrace(now); lastSpawn = t; nextSpawn = 1400 + Math.random() * 1800;
+      }
+      drawTraces(now);
+      drawLens();
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function renderStatic() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.drawImage(base, 0, 0, W, H);
+    ctx.drawImage(primesLayer, 0, 0, W, H);
+  }
+
+  function start() {
+    build();
+    if (reduce) { revealed = true; renderStatic(); return; }
+    requestAnimationFrame(frame);
+  }
+
+  // Input
+  window.addEventListener('pointermove', function (e) {
+    if (e.pointerType === 'touch') return;
+    var r = hero.getBoundingClientRect();
+    var x = e.clientX - r.left, y = e.clientY - r.top;
+    mouse.inside = y >= 0 && y <= r.height && x >= 0 && x <= r.width;
+    if (mouse.inside) { mouse.x = x; mouse.y = y; } else { mouse.x = mouse.y = -1e4; }
+  }, { passive: true });
+  document.addEventListener('pointerleave', function () { mouse.inside = false; mouse.x = mouse.y = -1e4; });
+  hero.addEventListener('pointerleave', function () { mouse.inside = false; mouse.x = mouse.y = -1e4; });
+
+  // Only animate while visible
+  function setRunning(v) {
+    if (reduce || v === running) return;
+    running = v;
+    if (running) requestAnimationFrame(frame);
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { setRunning(en[0].isIntersecting && !document.hidden); }).observe(hero);
+  }
+  document.addEventListener('visibilitychange', function () { setRunning(!document.hidden); });
+
+  // Rebuild on meaningful resizes (ignore mobile URL-bar jitter)
+  var rt, lastW = 0, lastH = 0;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () {
+      var r = hero.getBoundingClientRect();
+      if (Math.abs(r.width - lastW) < 2 && Math.abs(r.height - lastH) < 120) return;
+      lastW = r.width; lastH = r.height;
+      build();
+      if (reduce || revealed) { revealed = true; if (reduce) renderStatic(); }
+    }, 160);
+  });
+
+  var r0 = hero.getBoundingClientRect(); lastW = r0.width; lastH = r0.height;
+  start();
 })();
 </script>
 </body>
